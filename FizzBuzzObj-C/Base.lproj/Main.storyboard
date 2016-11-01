@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input a number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0g8-ks-niY">
+                                <rect key="frame" x="16" y="28" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="caw-su-G12"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqo-XE-Okq">
+                                <rect key="frame" x="15" y="66" width="345" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="mIf-Fo-krg"/>
+                                </constraints>
+                                <state key="normal" title="Run">
+                                    <color key="titleShadowColor" red="0.0" green="1" blue="0.46954255705544812" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="runTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b5b-PN-KdA"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="3W3-Nb-gEz">
+                                <rect key="frame" x="15" y="104" width="345" height="543"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lqo-XE-Okq" firstAttribute="top" secondItem="0g8-ks-niY" secondAttribute="bottom" constant="8" id="7NE-bg-hwi"/>
+                            <constraint firstItem="Lqo-XE-Okq" firstAttribute="top" secondItem="0g8-ks-niY" secondAttribute="bottom" constant="8" id="F7G-kK-bCc"/>
+                            <constraint firstItem="3W3-Nb-gEz" firstAttribute="top" secondItem="Lqo-XE-Okq" secondAttribute="bottom" constant="8" id="Ggy-qA-Nv3"/>
+                            <constraint firstItem="0g8-ks-niY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="K4j-BK-fS9"/>
+                            <constraint firstAttribute="trailing" secondItem="3W3-Nb-gEz" secondAttribute="trailing" constant="15" id="Kfl-6n-zuy"/>
+                            <constraint firstAttribute="trailing" secondItem="Lqo-XE-Okq" secondAttribute="trailing" constant="15" id="LaU-ju-h88"/>
+                            <constraint firstItem="0g8-ks-niY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="OSV-dt-Bkv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3W3-Nb-gEz" secondAttribute="bottom" constant="20" id="Usa-km-UKd"/>
+                            <constraint firstItem="3W3-Nb-gEz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="evz-VO-AHl"/>
+                            <constraint firstItem="0g8-ks-niY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kGK-Bo-Qyf"/>
+                            <constraint firstItem="Lqo-XE-Okq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="uuo-XO-OG3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="numberInputField" destination="0g8-ks-niY" id="Zds-Zi-jId"/>
+                        <outlet property="outputLabel" destination="3W3-Nb-gEz" id="H6A-5E-44C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
